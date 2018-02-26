@@ -1,2 +1,0 @@
-/usr/bin/ar qc libsndserv.a  CMakeFiles/sndserv.dir/linux.c.o CMakeFiles/sndserv.dir/sounds.c.o CMakeFiles/sndserv.dir/soundsrv.c.o CMakeFiles/sndserv.dir/wadread.c.o
-/usr/bin/ranlib libsndserv.a

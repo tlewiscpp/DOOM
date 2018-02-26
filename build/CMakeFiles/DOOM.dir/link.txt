@@ -1,1 +1,0 @@
-/usr/bin/c++  -Wall -Wextra -Wpedantic -Werror -DNORMALUNIX -DLINUX -O3    -rdynamic   -o DOOM -lXext -lX11 -lnsl -lm sndserv/libsndserv.a -lm 
