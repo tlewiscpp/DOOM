@@ -1,3 +1,9 @@
+Just some fun, toying around with the original DOOM source release
+
+/*********************************/
+/****ORIGINAL README.TXT BELOW****/
+/*********************************/
+
 
 Here it is, at long last.  The DOOM source code is released for your
 non-profit use.  You still need real DOOM data to work with this code.
