@@ -1,0 +1,6 @@
+/home/pinguinsan/GitHub/DOOM/build/CMakeFiles/rebuild_cache.dir
+/home/pinguinsan/GitHub/DOOM/build/CMakeFiles/DOOM.dir
+/home/pinguinsan/GitHub/DOOM/build/CMakeFiles/edit_cache.dir
+/home/pinguinsan/GitHub/DOOM/build/sndserv/CMakeFiles/rebuild_cache.dir
+/home/pinguinsan/GitHub/DOOM/build/sndserv/CMakeFiles/sndserv.dir
+/home/pinguinsan/GitHub/DOOM/build/sndserv/CMakeFiles/edit_cache.dir

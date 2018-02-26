@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsndserv.a  
+/usr/bin/ranlib libsndserv.a

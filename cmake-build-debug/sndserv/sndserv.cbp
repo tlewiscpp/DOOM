@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="sndserv"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\sndserv\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/pinguinsan/GitHub/DOOM/cmake-build-debug/sndserv"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/pinguinsan/GitHub/DOOM/cmake-build-debug/sndserv/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/pinguinsan/GitHub/DOOM/cmake-build-debug/sndserv/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/pinguinsan/GitHub/DOOM/cmake-build-debug/sndserv/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/pinguinsan/GitHub/DOOM/cmake-build-debug/sndserv/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sndserv">
+				<Option output="/home/pinguinsan/GitHub/DOOM/cmake-build-debug/sndserv/libsndserv.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/pinguinsan/GitHub/DOOM/cmake-build-debug/sndserv"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/pinguinsan/GitHub/DOOM/sndserv"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../include/c++/7.3.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../include/c++/7.3.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../include/c++/7.3.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/pinguinsan/GitHub/DOOM/cmake-build-debug/sndserv/Makefile&quot;  VERBOSE=1 sndserv"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/pinguinsan/GitHub/DOOM/cmake-build-debug/sndserv/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/pinguinsan/GitHub/DOOM/cmake-build-debug/sndserv/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/pinguinsan/GitHub/DOOM/cmake-build-debug/sndserv/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sndserv/fast">
+				<Option output="/home/pinguinsan/GitHub/DOOM/cmake-build-debug/sndserv/libsndserv.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/pinguinsan/GitHub/DOOM/cmake-build-debug/sndserv"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/pinguinsan/GitHub/DOOM/sndserv"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../include/c++/7.3.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../include/c++/7.3.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../include/c++/7.3.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/pinguinsan/GitHub/DOOM/cmake-build-debug/sndserv/Makefile&quot;  VERBOSE=1 sndserv/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/pinguinsan/GitHub/DOOM/cmake-build-debug/sndserv/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/pinguinsan/GitHub/DOOM/cmake-build-debug/sndserv/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/pinguinsan/GitHub/DOOM/cmake-build-debug/sndserv/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/pinguinsan/GitHub/DOOM/sndserv/linux.c">
+			<Option target="sndserv"/>
+		</Unit>
+		<Unit filename="/home/pinguinsan/GitHub/DOOM/sndserv/sounds.c">
+			<Option target="sndserv"/>
+		</Unit>
+		<Unit filename="/home/pinguinsan/GitHub/DOOM/sndserv/sounds.h">
+			<Option target="sndserv"/>
+		</Unit>
+		<Unit filename="/home/pinguinsan/GitHub/DOOM/sndserv/soundsrv.c">
+			<Option target="sndserv"/>
+		</Unit>
+		<Unit filename="/home/pinguinsan/GitHub/DOOM/sndserv/soundsrv.h">
+			<Option target="sndserv"/>
+		</Unit>
+		<Unit filename="/home/pinguinsan/GitHub/DOOM/sndserv/soundst.h">
+			<Option target="sndserv"/>
+		</Unit>
+		<Unit filename="/home/pinguinsan/GitHub/DOOM/sndserv/wadread.c">
+			<Option target="sndserv"/>
+		</Unit>
+		<Unit filename="/home/pinguinsan/GitHub/DOOM/sndserv/wadread.h">
+			<Option target="sndserv"/>
+		</Unit>
+		<Unit filename="/home/pinguinsan/GitHub/DOOM/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/pinguinsan/GitHub/DOOM/sndserv/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\sndserv\"/>
+		</Unit>
+		<Unit filename="/home/pinguinsan/GitHub/DOOM/sndserv/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\sndserv\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
