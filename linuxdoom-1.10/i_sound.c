@@ -37,6 +37,7 @@
 #endif
 
 #include <fcntl.h>
+#include <errno.h>
 #include <unistd.h>
 #include <sys/ioctl.h>
 
@@ -156,7 +157,7 @@ int*		channelrightvol_lookup[NUM_CHANNELS];
 // Safe ioctl, convenience.
 //
 void
-mysoundioctl
+myioctl
 ( int	fd,
   int	command,
   int*	arg )
@@ -261,7 +262,7 @@ getsfx
 // Returns a handle.
 //
 int
-addssoundfx
+addsfx
 ( int		sfxid,
   int		volume,
   int		step,
