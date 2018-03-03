@@ -66,7 +66,7 @@ void**			lumpcache;
 
 #define strcmpi	strcasecmp
 
-void strupr (char* s)
+void wadstrupr (char* s)
 {
     while (*s) { *s = toupper(*s); s++; }
 }

@@ -55,7 +55,7 @@ void openwad(char* wadname);
 //
 
 void*
-getsfx
+getwadsfx
 ( char*		sfxname,
   int*		len );
 

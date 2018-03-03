@@ -21,8 +21,7 @@
 //
 //-----------------------------------------------------------------------------
 
-static const char
-rcsid[] = "$Id: i_unix.c,v 1.5 1997/02/03 22:45:10 b1 Exp $";
+//static const char rcsid[] = "$Id: i_unix.c,v 1.5 1997/02/03 22:45:10 b1 Exp $";
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -157,7 +156,7 @@ int*		channelrightvol_lookup[NUM_CHANNELS];
 // Safe ioctl, convenience.
 //
 void
-myioctl
+mysoundioctl
 ( int	fd,
   int	command,
   int*	arg )
@@ -262,7 +261,7 @@ getsfx
 // Returns a handle.
 //
 int
-addsfx
+addssoundfx
 ( int		sfxid,
   int		volume,
   int		step,
@@ -690,7 +689,7 @@ I_UpdateSoundParams
 
 
 
-void I_ShutdownSound(void)
+void I_ShutdownSoundSound(void)
 {    
 #ifdef SNDSERV
   if (sndserver)
@@ -735,7 +734,7 @@ void I_ShutdownSound(void)
 
 
 void
-I_InitSound()
+I_InitSoundSound()
 { 
 #ifdef SNDSERV
   char buffer[256];
@@ -825,15 +824,6 @@ I_InitSound()
 }
 
 
-
-
-//
-// MUSIC API.
-// Still no music done.
-// Remains. Dummies.
-//
-void I_InitMusic(void)		{ }
-void I_ShutdownMusic(void)	{ }
 
 static int	looping=0;
 static int	musicdies=-1;

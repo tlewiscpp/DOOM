@@ -32,7 +32,7 @@
 //
 //-----------------------------------------------------------------------------
 
-static const char rcsid[] = "$Id: linux.c,v 1.3 1997/01/26 07:45:01 b1 Exp $";
+//static const char rcsid[] = "$Id: linux.c,v 1.3 1997/01/26 07:45:01 b1 Exp $";
 
 
 #include <stdlib.h>
@@ -41,6 +41,7 @@ static const char rcsid[] = "$Id: linux.c,v 1.3 1997/01/26 07:45:01 b1 Exp $";
 #include <unistd.h>
 
 #include <linux/soundcard.h>
+#include <sys/ioctl.h>
 
 #include "soundsrv.h"
 
@@ -55,7 +56,7 @@ myioctl
     int		rc;
     extern int	errno;
     
-    rc = ioctl(fd, command, arg);  
+    rc = ioctl(fd, command, arg);
     if (rc < 0)
     {
 	fprintf(stderr, "ioctl(dsp,%d,arg) failed\n", command);

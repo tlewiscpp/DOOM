@@ -20,8 +20,7 @@
 //
 //-----------------------------------------------------------------------------
 
-static const char
-rcsid[] = "$Id: p_doors.c,v 1.4 1997/02/03 16:47:53 b1 Exp $";
+//static const char rcsid[] = "$Id: p_doors.c,v 1.4 1997/02/03 16:47:53 b1 Exp $";
 
 
 #include "z_zone.h"
@@ -360,6 +359,8 @@ EV_VerticalDoor
     sector_t*	sec;
     vldoor_t*	door;
     int		side;
+
+	(void)secnum;
 	
     side = 0;	// only front sides can be used
 
@@ -530,6 +531,8 @@ P_SpawnDoorRaiseIn5Mins
   int		secnum )
 {
     vldoor_t*	door;
+
+    (void)secnum;
 	
     door = Z_Malloc ( sizeof(*door), PU_LEVSPEC, 0);
     
