@@ -24,7 +24,8 @@
 //
 //-----------------------------------------------------------------------------
 
-//static const char rcsid[] = "$Id: m_misc.c,v 1.6 1997/02/03 22:45:10 b1 Exp $";
+static const char
+rcsid[] = "$Id: m_misc.c,v 1.6 1997/02/03 22:45:10 b1 Exp $";
 
 #include <sys/stat.h>
 #include <sys/types.h>
@@ -232,82 +233,68 @@ typedef struct
 
 default_t	defaults[] =
 {
-    {"mouse_sensitivity",&mouseSensitivity, 5, 0, 0},
-    {"sfx_volume",&snd_SfxVolume, 8, 0, 0},
-    {"music_volume",&snd_MusicVolume, 8, 0, 0},
-    {"show_messages",&showMessages, 1, 0, 0},
+    {"mouse_sensitivity",&mouseSensitivity, 5},
+    {"sfx_volume",&snd_SfxVolume, 8},
+    {"music_volume",&snd_MusicVolume, 8},
+    {"show_messages",&showMessages, 1},
     
 
 #ifdef NORMALUNIX
-    {"key_right",&key_right, KEY_RIGHTARROW, 0, 0},
-    {"key_left",&key_left, KEY_LEFTARROW, 0, 0},
-    {"key_up",&key_up, KEY_UPARROW, 0, 0},
-    {"key_down",&key_down, KEY_DOWNARROW, 0, 0},
-    {"key_strafeleft",&key_strafeleft, ',', 0, 0},
-    {"key_straferight",&key_straferight, '.', 0, 0},
+    {"key_right",&key_right, KEY_RIGHTARROW},
+    {"key_left",&key_left, KEY_LEFTARROW},
+    {"key_up",&key_up, KEY_UPARROW},
+    {"key_down",&key_down, KEY_DOWNARROW},
+    {"key_strafeleft",&key_strafeleft, ','},
+    {"key_straferight",&key_straferight, '.'},
 
-    {"key_fire",&key_fire, KEY_RCTRL, 0, 0},
-    {"key_use",&key_use, ' ', 0, 0},
-    {"key_strafe",&key_strafe, KEY_RALT, 0, 0},
-    {"key_speed",&key_speed, KEY_RSHIFT, 0, 0},
+    {"key_fire",&key_fire, KEY_RCTRL},
+    {"key_use",&key_use, ' '},
+    {"key_strafe",&key_strafe, KEY_RALT},
+    {"key_speed",&key_speed, KEY_RSHIFT},
 
 // UNIX hack, to be removed. 
 #ifdef SNDSERV
-    //{"sndserver", (int *) &sndserver_filename, (int)"sndserver", 0, 0},
-    {"sndserver", (int *) &sndserver_filename, 0, 0, 0},
-    {"mb_used", &mb_used, 2, 0, 0},
+    {"sndserver", (int *) &sndserver_filename, 0},
+    {"mb_used", &mb_used, 2},
 #endif
     
 #endif
 
 #ifdef LINUX
-    //{"mousedev", (int*)&mousedev, (int)"/dev/ttyS0", 0, 0},
-    //{"mousetype", (int*)&mousetype, (int)"microsoft", 0, 0},
-    {"mousedev", (int*)&mousedev, 0, 0, 0},
-    {"mousetype", (int*)&mousetype, 0, 0, 0},
+    {"mousedev", (int*)&mousedev, 0},
+    {"mousetype", (int*)&mousetype, 0},
 #endif
 
-    {"use_mouse",&usemouse, 1, 0, 0},
-    {"mouseb_fire",&mousebfire,0, 0, 0},
-    {"mouseb_strafe",&mousebstrafe,1, 0, 0},
-    {"mouseb_forward",&mousebforward,2, 0, 0},
+    {"use_mouse",&usemouse, 1},
+    {"mouseb_fire",&mousebfire,0},
+    {"mouseb_strafe",&mousebstrafe,1},
+    {"mouseb_forward",&mousebforward,2},
 
-    {"use_joystick",&usejoystick, 0, 0, 0},
-    {"joyb_fire",&joybfire,0, 0, 0},
-    {"joyb_strafe",&joybstrafe,1, 0, 0},
-    {"joyb_use",&joybuse,3, 0, 0},
-    {"joyb_speed",&joybspeed,2, 0, 0},
+    {"use_joystick",&usejoystick, 0},
+    {"joyb_fire",&joybfire,0},
+    {"joyb_strafe",&joybstrafe,1},
+    {"joyb_use",&joybuse,3},
+    {"joyb_speed",&joybspeed,2},
 
-    {"screenblocks",&screenblocks, 9, 0, 0},
-    {"detaillevel",&detailLevel, 0, 0, 0},
+    {"screenblocks",&screenblocks, 9},
+    {"detaillevel",&detailLevel, 0},
 
-    {"snd_channels",&numChannels, 3, 0, 0},
+    {"snd_channels",&numChannels, 3},
 
 
 
-    {"usegamma",&usegamma, 0, 0, 0},
+    {"usegamma",&usegamma, 0},
 
-//    {"chatmacro0", (int *) &chat_macros[0], 0, 0, 0},
-//    {"chatmacro1", (int *) &chat_macros[1], 1, 0, 0 },
-//    {"chatmacro2", (int *) &chat_macros[2], 2, 0, 0 },
-//    {"chatmacro3", (int *) &chat_macros[3], 3, 0, 0 },
-//    {"chatmacro4", (int *) &chat_macros[4], 4, 0, 0 },
-//    {"chatmacro5", (int *) &chat_macros[5], 5, 0, 0 },
-//    {"chatmacro6", (int *) &chat_macros[6], 6, 0, 0 },
-//    {"chatmacro7", (int *) &chat_macros[7], 7, 0, 0 },
-//    {"chatmacro8", (int *) &chat_macros[8], 8, 0, 0 },
-//    {"chatmacro9", (int *) &chat_macros[9], 9, 0, 0 }
-        
-{"chatmacro0", (int *) &chat_macros[0], 0, 0, 0},
-{"chatmacro1", (int *) &chat_macros[1], 1, 0, 0 },
-{"chatmacro2", (int *) &chat_macros[2], 2, 0, 0 },
-{"chatmacro3", (int *) &chat_macros[3], 3, 0, 0 },
-{"chatmacro4", (int *) &chat_macros[4], 4, 0, 0 },
-{"chatmacro5", (int *) &chat_macros[5], 5, 0, 0 },
-{"chatmacro6", (int *) &chat_macros[6], 6, 0, 0 },
-{"chatmacro7", (int *) &chat_macros[7], 7, 0, 0 },
-{"chatmacro8", (int *) &chat_macros[8], 8, 0, 0 },
-{"chatmacro9", (int *) &chat_macros[9], 9, 0, 0 }
+    {"chatmacro0", (int *) &chat_macros[0], 0 },
+    {"chatmacro1", (int *) &chat_macros[1], 0 },
+    {"chatmacro2", (int *) &chat_macros[2], 0 },
+    {"chatmacro3", (int *) &chat_macros[3], 0 },
+    {"chatmacro4", (int *) &chat_macros[4], 0 },
+    {"chatmacro5", (int *) &chat_macros[5], 0 },
+    {"chatmacro6", (int *) &chat_macros[6], 0 },
+    {"chatmacro7", (int *) &chat_macros[7], 0 },
+    {"chatmacro8", (int *) &chat_macros[8], 0 },
+    {"chatmacro9", (int *) &chat_macros[9], 0 }
 
 };
 
@@ -350,8 +337,50 @@ void M_SaveDefaults (void)
 //
 extern byte	scantokey[128];
 
+void M_LoadDefaults_RunHooks()
+{
+    for (int i = 0; i < numdefaults; i++) {
+        char *name = defaults[i].name;
+#ifdef SNDSERV
+        if (strcmp(name, "sndserver") == 0) {
+            defaults[i].defaultvalue = (int)"sndserver";
+        }
+#endif //ifdef SNDSERV
+#ifdef LINUX
+            else if (strcmp(name, "mousedev") == 0) {
+            defaults[i].defaultvalue = (int)"/dev/ttyS0";
+        } else if (strcmp(name, "mousetype") == 0) {
+            defaults[i].defaultvalue = (int)"microsoft";
+        }
+#endif //LINUX
+        else if (strcmp(name, "chatmacro0") == 0) {
+            defaults[i].defaultvalue = (int)HUSTR_CHATMACRO0;
+        } else if (strcmp(name, "chatmacro1") == 0) {
+            defaults[i].defaultvalue = (int)HUSTR_CHATMACRO1;
+        } else if (strcmp(name, "chatmacro2") == 0) {
+            defaults[i].defaultvalue = (int)HUSTR_CHATMACRO2;
+        } else if (strcmp(name, "chatmacro3") == 0) {
+            defaults[i].defaultvalue = (int)HUSTR_CHATMACRO3;
+        } else if (strcmp(name, "chatmacro4") == 0) {
+            defaults[i].defaultvalue = (int)HUSTR_CHATMACRO4;
+        } else if (strcmp(name, "chatmacro5") == 0) {
+            defaults[i].defaultvalue = (int)HUSTR_CHATMACRO5;
+        } else if (strcmp(name, "chatmacro6") == 0) {
+            defaults[i].defaultvalue = (int)HUSTR_CHATMACRO6;
+        } else if (strcmp(name, "chatmacro7") == 0) {
+            defaults[i].defaultvalue = (int)HUSTR_CHATMACRO7;
+        } else if (strcmp(name, "chatmacro8") == 0) {
+            defaults[i].defaultvalue = (int)HUSTR_CHATMACRO8;
+        } else if (strcmp(name, "chatmacro9") == 0) {
+            defaults[i].defaultvalue = (int)HUSTR_CHATMACRO9;
+        }
+    }
+}
+
 void M_LoadDefaults (void)
 {
+    M_LoadDefaults_RunHooks();
+
     int		i;
     int		len;
     FILE*	f;

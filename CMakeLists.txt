@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.1)
 set(LANGUAGE "C")
+set(CMAKE_C_STANDARD 11)
 
 project(DOOM ${LANGUAGE})
 

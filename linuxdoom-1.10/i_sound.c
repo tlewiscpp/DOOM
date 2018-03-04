@@ -21,7 +21,7 @@
 //
 //-----------------------------------------------------------------------------
 
-//static const char rcsid[] = "$Id: i_unix.c,v 1.5 1997/02/03 22:45:10 b1 Exp $";
+
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -36,8 +36,8 @@
 #include <sys/filio.h>
 #endif
 
-#include <fcntl.h>
 #include <errno.h>
+#include <fcntl.h>
 #include <unistd.h>
 #include <sys/ioctl.h>
 
@@ -690,7 +690,7 @@ I_UpdateSoundParams
 
 
 
-void I_ShutdownSoundSound(void)
+void I_ShutdownSound(void)
 {    
 #ifdef SNDSERV
   if (sndserver)
@@ -735,7 +735,7 @@ void I_ShutdownSoundSound(void)
 
 
 void
-I_InitSoundSound()
+I_InitSound()
 { 
 #ifdef SNDSERV
   char buffer[256];
@@ -825,6 +825,15 @@ I_InitSoundSound()
 }
 
 
+
+
+//
+// MUSIC API.
+// Still no music done.
+// Remains. Dummies.
+//
+void I_InitMusic(void)		{ }
+void I_ShutdownMusic(void)	{ }
 
 static int	looping=0;
 static int	musicdies=-1;
